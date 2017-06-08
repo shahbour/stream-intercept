@@ -25,9 +25,9 @@ public class StreamInterceptApplication implements CommandLineRunner {
 	@Autowired
 	MessageChannel output;
 
-	@Scheduled(fixedDelay = 5000L)
+	@Scheduled(fixedDelay = 2000L)
 	public void sendMessage() {
-		output.send(MessageBuilder.withPayload("adfadsfads").build());
+		output.send(MessageBuilder.withPayload(new Customer(1,"Ali Shahbour")).build());
 	}
 
 	@Autowired
