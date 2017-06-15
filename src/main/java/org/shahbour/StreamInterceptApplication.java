@@ -35,6 +35,6 @@ public class StreamInterceptApplication implements CommandLineRunner {
 
 	@Override
 	public void run(String... strings) throws Exception {
-		((DirectChannel)output).addInterceptor(auditIntercept);
+		((DirectChannel) output).addInterceptor(0, auditIntercept);
 	}
 }
